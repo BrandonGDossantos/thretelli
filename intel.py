@@ -8,10 +8,7 @@ import configparser
 Virus Total 
 '''
 def virustotal_ip_report(ip):
-    # url = '{}{}'.format(VIRUSTOTAL_BASE_URL, "/ip-address/report")
-    # print(url)
     url = '%s%s' % (VIRUSTOTAL_BASE_URL, '/ip-address/report')
-    # print(type(url))
     params = {'ip': ip, 'apikey': VIRUSTOTAL_API_KEY}
     response = requests.get(url, params=params)
     return response.json()
@@ -26,7 +23,6 @@ def virustotal_domain_report(domain):
 Cymon
 '''
 def cymon_ip_report(ip):
-    # url = '{}ip/{}'.format(CYMON_BASE_URL, ip)
     url = '%sip/%s' % (CYMON_BASE_URL, ip)
     response = requests.get(url, headers=CYMON_HEADERS)
     return response.json()
@@ -75,12 +71,6 @@ def greynoise_ip_quick(ip):
 
 def greynoise_ip_context(ip):
     url = '{}/v2/noise/context/{}'.format(GREYNOISE_BASE_URL, ip)
-    headers = {'key': GREYNOISE_API_KEY}
-    response = requests.get(url, headers=headers)
-    return response.json()
-
-def greynoise_ip_bulk():
-    url = '{}/v2/noise/bulk'.format(GREYNOISE_BASE_URL)
     headers = {'key': GREYNOISE_API_KEY}
     response = requests.get(url, headers=headers)
     return response.json()
@@ -145,5 +135,4 @@ if __name__ == "__main__":
     except:
         raise ValueError("Please add an artifact")
     print(json.dumps(res, indent=4))
-    # print(res)
 
