@@ -134,5 +134,7 @@ if __name__ == "__main__":
             res['PassiveTotal'] = passivetotal_enrichment(artifact)
     except:
         raise ValueError("Please add an artifact")
-    print(json.dumps(res, indent=4))
+    f = open("{}.json".format(artifact), 'w')
+    f.write(json.dumps(res, indent=4))
+    f.close()
 
