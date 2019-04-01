@@ -137,4 +137,3 @@ if __name__ == "__main__":
     f = open("{}.json".format(artifact), 'w')
     f.write(json.dumps(res, indent=4))
     f.close()
-

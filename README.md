@@ -25,7 +25,6 @@ ___
 #### GET /v2/noise/quick/{ip}
 #### GET /v2/noise/context/{ip}
 ___
-### :heavy_exclamation_mark: Passive Total 
-Note: Out of commission - Quota Exceeded
+### :white_check_mark: Passive Total 
 #### GET /v2/enrichment
 
