@@ -5,5 +5,5 @@ idna==2.7
 requests==2.20.1
 six==1.11.0
 urllib3==1.24.1
-validators==0.12.3
+validators==0.12.6
 configparser
