@@ -4,6 +4,6 @@ decorator==4.3.0
 idna==2.7
 requests==2.20.1
 six==1.11.0
-urllib3==1.24.1
+urllib3==1.26.5
 validators==0.12.3
 configparser
